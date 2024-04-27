@@ -73,7 +73,7 @@ a, a:hover {
 }
 
 .back-to-top i {
-  color: #fff;
+  color: #adaa7b;
   font-size: 20px;
 }
 
@@ -88,7 +88,7 @@ a, a:hover {
 }
 
 .special-title-2 {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Eczar', cursive;
   margin-bottom: 2.8rem;
   font-size: 2.8rem;
 }
@@ -106,7 +106,7 @@ a, a:hover {
   border: 1px solid #003166;
   text-align: center;
   color: #fff;
-  background: #003D7F;
+  background: #adaa7b;
   border-radius: 4px;
   box-shadow: 0 0 30px rgba(0,0,0,.15) inset, 0 6px 10px rgba(0,0,0,.15);
 }
@@ -151,6 +151,20 @@ a, a:hover {
   font-weight: 700;
 }
 
+.navbar-logo {
+  border-radius: 50%; /* Makes the image circular */
+  width: 50px; /* Sets the width of the logo */
+  height: 50px; /* Sets the height of the logo */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
+.navbar-logo2 {
+  border-radius: 50%; /* Makes the image circular */
+  width: 80px; /* Sets the width of the logo */
+  height: 80px; /* Sets the height of the logo */
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+}
+
 /*
  * COVER
  */
@@ -184,10 +198,11 @@ a, a:hover {
 }
 
 .brand-title {
-  font-family: 'Fredericka the Great', cursive;
+  font-family: 'Eczar', serif;
   /* font size = min font size + (max font size - min font size) * (100vw - min viewport size) / (max viewport size - min viewport size) */
   font-size: calc(50px + (120 - 50) * (100vw - 320px)/(2560 - 320));
 }
+
 
 .brand-description {
   /* font size = min font size + (max font size - min font size) * (100vw - min viewport size) / (max viewport size - min viewport size) */
@@ -200,6 +215,12 @@ a, a:hover {
 .homepage-menu {
   padding-top: 8rem;
   padding-bottom: 8rem;
+  /* background-color: #a8aa83; */
+}
+.homepage-menu .row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .homepage-menu-description {
@@ -210,6 +231,19 @@ a, a:hover {
   margin-top: 8rem;
 }
 
+.menu-image {
+  width: 300px;  /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  object-fit: cover; /* Keeps the aspect ratio intact */
+}
+@media (max-width: 768px) {
+  .menu-image {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+
 /* 
  * HOMEPAGE-ABOUT-US
  */
@@ -217,7 +251,7 @@ a, a:hover {
 .homepage-about-us {
   overflow: hidden;
   position: relative;
-  background-color: #001F40;
+  background-color: #083c16;
 }
 
 .homepage-about-us-bg {
@@ -313,7 +347,7 @@ a, a:hover {
   padding-top: 4rem;
   font-size: 0.75rem;
   text-align: center;
-  background: #001F40;
+  background: #67a270;
   line-height: 1.75;
 }
 
@@ -339,7 +373,7 @@ a, a:hover {
 .page-footer-copyright {
   position: relative;
   z-index: 2;
-  background: #003D7F;
+  background: #67a270;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
@@ -385,7 +419,7 @@ a, a:hover {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background-color: #007bff;
+  background-color: #96a487;
   transition: all 0.3s ease-in-out;
   text-align: center;
   line-height: 47px;
@@ -393,7 +427,7 @@ a, a:hover {
 }
 
 .footer-social:hover {
-  background-color: #0069d9;
+  background-color: #96a487;
   transform: scale(1.1) rotate(360deg);
 }
 
@@ -435,7 +469,7 @@ a, a:hover {
   text-align: center;
   overflow: hidden;
   position: relative;
-  background-color: #001F40;
+  background-color: #083c16;
   border-radius: 0%;
   height:  calc(100vh - 62px);
 }
@@ -565,7 +599,7 @@ a, a:hover {
 .contact-directions {
   text-align: center;
   padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-bottom: 8rem;/*<d<d*/
   max-width: 50em;
 }
 
@@ -661,12 +695,50 @@ a, a:hover {
   transform: translate(-50%, -50%);
 }
 
+.food-jumbotron-caption2 {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 30%;
+  margin-right: -30%;
+  transform: translate(-30%, -30%);
+}
+
 .menu-icon {
   max-width: 45px; 
 }
 
 .menu-icon-text {
   display: none;
+}
+
+
+.custom-row {
+  margin-left: 0;    /* Removes the default left margin */
+  margin-right: 0;   /* Removes the default right margin */
+  display: flex;
+  justify-content: space-between; /* Keeps items evenly spaced */
+}
+
+.custom-col {
+  flex: 0 0 15%; /* Prevents growing or shrinking and sets base width */
+  max-width: 15%; /* Ensures that the flex-basis does not exceed 20% */
+  text-align: center; /* Centers the icons and text within each column */
+  padding: 0 10px; /* Adjust padding as needed, but keep it small */
+}
+
+@media (max-width: 768px) {
+  .custom-col {
+    flex: 0 0 50%; /* Takes half the width on smaller screens */
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-col {
+    flex: 0 0 100%; /* Full width on very small screens */
+    max-width: 100%;
+  }
 }
 
 .food-jumbotron h1 {
@@ -824,7 +896,7 @@ a, a:hover {
   border-radius: 0%;
   height:  calc(100vh - 62px);
 }
-
+From the 
 .desserts-jumbotron-bg {
   position: absolute;
   top: 0;
@@ -852,7 +924,7 @@ a, a:hover {
 }
 
 .dessert-category {
-  padding-top: 8rem;
+  padding-top: 8rem; 
 }
 
 .dessert-category h2 {
@@ -906,7 +978,7 @@ a, a:hover {
  */
 
 .album-description {
-  background: #003d7f;
+  background: #67a270;
   padding-top: 8rem;
   padding-bottom: 8rem;
   text-align: center;
@@ -933,7 +1005,7 @@ a, a:hover {
   padding-top: 8rem;
   padding-bottom: 8rem;
   text-align: center;
-  background: white;
+  background: rgb(133, 135, 104);
 }
 
 .gallery-description h2 {
@@ -1001,6 +1073,20 @@ a, a:hover {
     display: block;
   }
 }
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    width: 40px; /* Smaller width on mobile devices */
+    height: 40px; /* Smaller height on mobile devices */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar-logo2 {
+    width: 50px; /* Smaller width on mobile devices */
+    height: 50px; /* Smaller height on mobile devices */
+  }
+}
  
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
@@ -1035,7 +1121,7 @@ a, a:hover {
   .page-footer-title::before {
     content: '';
     width: 30px;
-    border-top: #007bff;
+    border-top: #237b14;
     border-top-style: solid;
     border-top-width: 3px;
     display: block;
@@ -1046,7 +1132,7 @@ a, a:hover {
     content: '';
     display: block;
     width: 30px;
-    border-top: 3px solid #007bff;
+    border-top: 3px solid #6ba367;
     margin-bottom: .8rem;
   }
 

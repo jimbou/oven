@@ -2,18 +2,22 @@
 var food = document.querySelector('#food');
 var desserts = document.querySelector('#desserts');
 var drinks = document.querySelector('#drinks');
+var salads = document.querySelector('#salads');
+var lunch = document.querySelector('#lunch');
 var aboutDescription  = document.querySelector('#about-description');
-var card1 = document.querySelector('#card-1');
-var card2 = document.querySelector('#card-2');
-var card3 = document.querySelector('#card-3');
+// var card1 = document.querySelector('#card-1');
+// var card2 = document.querySelector('#card-2');
+// var card3 = document.querySelector('#card-3');
 var newsletterForm = document.querySelector('#newsletter-form');
 food.style.opacity = "0";
 desserts.style.opacity = "0";
 drinks.style.opacity = "0";
+salads.style.opacity = "0";
+lunch.style.opacity = "0";
 aboutDescription.style.opacity = "0";
-card1.style.opacity = "0";
-card2.style.opacity = "0";
-card3.style.opacity = "0";
+// card1.style.opacity = "0";
+// card2.style.opacity = "0";
+// card3.style.opacity = "0";
 newsletterForm.style.opacity = "0";
 
 var options = {
@@ -48,6 +52,22 @@ function callback(entries, observer) {
           observer.unobserve(entry.target);
         }
         break;
+        case "salads":
+          if (entry.intersectionRatio > 0) {
+            salads.style.opacity = "1";
+            salads.className += " animated slideInUp";
+            // Stop observing target
+            observer.unobserve(entry.target);
+          }
+          break;
+        case "lunch":
+          if (entry.intersectionRatio > 0) {
+            lunch.style.opacity = "1";
+            lunch.className += " animated slideInUp";
+            // Stop observing target
+            observer.unobserve(entry.target);
+          }
+          break;
       case "about-description":
         if (entry.intersectionRatio > 0) {
           aboutDescription.style.opacity = "1";
@@ -56,30 +76,30 @@ function callback(entries, observer) {
           observer.unobserve(entry.target);
         }
         break;
-      case "card-1":
-        if (entry.intersectionRatio > 0) {
-          card1.style.opacity = "1";
-          card1.className += " animated slideInUp";
-          // Stop observing target
-          observer.unobserve(entry.target);
-        }
-        break;
-      case "card-2":
-        if (entry.intersectionRatio > 0) {
-          card2.style.opacity = "1";
-          card2.className += " animated slideInUp";
-          // Stop observing target
-          observer.unobserve(entry.target);
-        }
-        break;
-      case "card-3":
-        if (entry.intersectionRatio > 0) {
-          card3.style.opacity = "1";
-          card3.className += " animated slideInUp";
-          // Stop observing target
-          observer.unobserve(entry.target);
-        }
-        break;
+      // case "card-1":
+      //   if (entry.intersectionRatio > 0) {
+      //     card1.style.opacity = "1";
+      //     card1.className += " animated slideInUp";
+      //     // Stop observing target
+      //     observer.unobserve(entry.target);
+      //   }
+      //   break;
+      // case "card-2":
+      //   if (entry.intersectionRatio > 0) {
+      //     card2.style.opacity = "1";
+      //     card2.className += " animated slideInUp";
+      //     // Stop observing target
+      //     observer.unobserve(entry.target);
+      //   }
+      //   break;
+      // case "card-3":
+      //   if (entry.intersectionRatio > 0) {
+      //     card3.style.opacity = "1";
+      //     card3.className += " animated slideInUp";
+      //     // Stop observing target
+      //     observer.unobserve(entry.target);
+      //   }
+      //   break;
       case "newsletter-form":
         if (entry.intersectionRatio > 0) {
           newsletterForm.style.opacity = "1";
@@ -99,8 +119,10 @@ var observer = new IntersectionObserver(callback, options);
 observer.observe(food);
 observer.observe(desserts);
 observer.observe(drinks);
+observer.observe(salads);
+observer.observe(lunch);
 observer.observe(aboutDescription);
-observer.observe(card1);
-observer.observe(card2);
-observer.observe(card3);
+// observer.observe(card1);
+// observer.observe(card2);
+// observer.observe(card3);
 observer.observe(newsletterForm);
