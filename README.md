@@ -1,6 +1,6 @@
 # Grecko
 
-Grecko is a restaurant website template built with Bootstrap 4. It is fully responsive, fast, accessible and search engine optimized.
+Oven is a restaurant website  built for the oven cafe and Brunch in glyfada and Vari.
 
 ## Features
 
@@ -34,13 +34,8 @@ After downloading, simply edit the HTML and CSS files included with the template
 * [lazysizes](https://github.com/aFarkas/lazysizes) - Lazy loader for images, iframes and more
 
 ## Author
-
-[Marios Sofokleous](https://www.msof.me/) (PictureElement)
-
-## Todo
-1. Add information regarding the usage of script.sh and the responsive breakpoint generator program in node.js
-2. Improve delivery of background images
-
+Bouras Dimitris 
+Papademos Alexandros
 ## Copyright &amp; License
 
 &copy; 2019 Marios Sofokleous (PictureElement). Code released under the [MIT](LICENSE) license.
